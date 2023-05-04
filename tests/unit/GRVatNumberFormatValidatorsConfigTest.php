@@ -1,17 +1,19 @@
 <?php
 
-// TODO: add namespace
+namespace rocketfellows\GRVatNumberFormatValidatorsConfig\tests\unit;
 
 use arslanimamutdinov\ISOStandard3166\ISO3166;
 use PHPUnit\Framework\TestCase;
 use rocketfellows\CountryVatFormatValidatorInterface\CountryVatFormatValidatorInterface;
 use rocketfellows\CountryVatFormatValidatorInterface\CountryVatFormatValidators;
 use rocketfellows\CountryVatNumberFormatValidatorsConfig\CountryVatNumberFormatValidatorsConfigInterface;
+use rocketfellows\GRVatFormatValidator\GRVatFormatValidator;
+use rocketfellows\GRVatNumberFormatValidatorsConfig\GRVatNumberFormatValidatorsConfig;
 
-class CountryVatNumberFormatValidatorsConfigTest extends TestCase
+class GRVatNumberFormatValidatorsConfigTest extends TestCase
 {
-    private const TESTING_CONFIG_CLASS = CountryVatNumberFormatValidatorsConfig::class;
-    private const EXPECTED_CONFIG_DEFAULT_VALIDATOR_CLASS = CountryVatFormatValidator::class;
+    private const TESTING_CONFIG_CLASS = GRVatNumberFormatValidatorsConfig::class;
+    private const EXPECTED_CONFIG_DEFAULT_VALIDATOR_CLASS = GRVatFormatValidator::class;
 
     public function testOverrideConfigurationDefaultValidator(): void
     {
@@ -139,7 +141,7 @@ class CountryVatNumberFormatValidatorsConfigTest extends TestCase
 
     private function assertExpectedConfigCountry(CountryVatNumberFormatValidatorsConfigInterface $config): void
     {
-        $this->assertEquals(ISO3166::COUNTRY(), $config->getCountry());
+        $this->assertEquals(ISO3166::GR(), $config->getCountry());
     }
 
     private function getDefaultConfigValidator(): CountryVatFormatValidatorInterface

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1683234571">
-  <project timestamp="1683234571">
+<coverage generated="1683234852">
+  <project timestamp="1683234852">
     <file name="/app/src/GRVatNumberFormatValidatorsConfig.php">
       <class name="rocketfellows\GRVatNumberFormatValidatorsConfig\GRVatNumberFormatValidatorsConfig" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
